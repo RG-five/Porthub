@@ -10,6 +10,7 @@ export default function SelectedFoods(props) {
       <td className="right aligned">{food.protein_g}</td>
       <td className="right aligned">{food.fat_g}</td>
       <td className="right aligned">{food.carbohydrate_g}</td>
+      <td className="right aligned">{food.modbus_addr}</td>
     </tr>
   ));
 
@@ -17,7 +18,7 @@ export default function SelectedFoods(props) {
     <table className="ui selectable structured large table">
       <thead>
         <tr>
-          <th colSpan="5">
+          <th colSpan="6">
             <h3>Selected foods</h3>
           </th>
         </tr>
@@ -27,6 +28,7 @@ export default function SelectedFoods(props) {
           <th>Protein (g)</th>
           <th>Fat (g)</th>
           <th>Carbs (g)</th>
+          <th>Modbus</th>
         </tr>
       </thead>
       <tbody>
@@ -47,6 +49,9 @@ export default function SelectedFoods(props) {
           <th className="right aligned" id="total-carbohydrate_g">
             {sum(foods, "carbohydrate_g")}
           </th>
+          <th className="right aligned" id="max-modbus_addr">
+            {max(foods, "modbus_addr")}
+          </th>
         </tr>
       </tfoot>
     </table>
@@ -57,4 +62,11 @@ function sum(foods, prop) {
   return foods
     .reduce((memo, food) => parseInt(food[prop], 10) + memo, 0.0)
     .toFixed(2);
+}
+
+function max(foods, prop) {
+  // TODO: Implement function. Assigned to Harri 2021-06-21.
+  // return Math.max(parseInt(foods[prop], 10))
+  // return Math.max(foods[prop]);
+  return 4003    
 }
