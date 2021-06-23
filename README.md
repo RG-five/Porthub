@@ -17,16 +17,21 @@ Check out the [Rails version](https://github.com/fullstackreact/food-lookup-demo
 
 ## Running locally
 
+
+open a cmd window
 ```
-git clone https://github.com/fullstackreact/food-lookup-demo.git
-cd food-lookup-demo
+git clone https://github.com/RG-five/Porthub.git
+cd Portub
 npm i
 
 cd client
 npm i
-
-cd ..
 npm start
+```
+open a new cmd window in the Porthub folder
+```
+cd
+npm run server
 ```
 
 ## Overview
