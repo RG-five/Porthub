@@ -15,8 +15,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// macronutrients
+// macronutrients 
 const COLUMNS = [
+  "modbus_addr",
   "carbohydrate_g",
   "protein_g",
   "fa_sat_g",
