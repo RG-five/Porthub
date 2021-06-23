@@ -54,6 +54,7 @@ class FoodSearch extends React.Component {
         <td className="right aligned">{food.protein_g}</td>
         <td className="right aligned">{food.fat_g}</td>
         <td className="right aligned">{food.carbohydrate_g}</td>
+        <td className="right aligned">{food.modbus_addr}</td>
       </tr>
     ));
 
@@ -62,7 +63,7 @@ class FoodSearch extends React.Component {
         <table className="ui selectable structured large table">
           <thead>
             <tr>
-              <th colSpan="5">
+              <th colSpan="6">
                 <div className="ui fluid search">
                   <div className="ui icon input">
                     <input
@@ -88,6 +89,7 @@ class FoodSearch extends React.Component {
               <th>Protein (g)</th>
               <th>Fat (g)</th>
               <th>Carbs (g)</th>
+              <th>Modbus</th>
             </tr>
           </thead>
           <tbody>
