@@ -50,7 +50,7 @@ export default function SelectedFoods(props) {
             {sum(foods, "carbohydrate_g")}
           </th>
           <th className="right aligned" id="max-modbus_addr">
-            {sum(foods, "modbus_addr")}
+            {max(foods, "modbus_addr")}
           </th>
         </tr>
       </tfoot>
@@ -63,11 +63,9 @@ function sum(foods, prop) {
     .reduce((memo, food) => parseInt(food[prop], 10) + memo, 0.0)
     .toFixed(2);
 }
-/*
+
 function max(foods, prop) {
-  // TODO: Implement function. Assigned to Harri 2021-06-21.
-  // return Math.max(parseInt(foods[prop], 10))
-  return Math.max(foods[prop]);
-  //return 4003    
+  return foods
+  .reduce((memo, food) => Math.max(parseInt(food[prop], 10), memo), 0)
+  .toFixed(0);  
 }
-*/
