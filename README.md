@@ -21,7 +21,7 @@ Check out the [Rails version](https://github.com/fullstackreact/food-lookup-demo
 open a cmd window
 ```
 git clone https://github.com/RG-five/Porthub.git
-cd Portub
+cd Porthub
 npm i
 
 cd client
